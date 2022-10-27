@@ -1,9 +1,12 @@
 {
+  "homepage": "http://gody243.github.io/remi-clothes",
   "name": "remi-clothes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,6 +22,7 @@
     "autoprefixer": "^10.4.12",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.18",
     "tailwindcss": "^3.2.1"
   }
