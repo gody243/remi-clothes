@@ -26,8 +26,8 @@ export default function Home() {
     
    <footer className="{styles.footer}">
     <ul>
-   <li><Link href="/posts/about">About us</Link></li>
-   <li><Link href="/posts/contact">Contact us</Link></li>
+   <li><Link href="/posts/aboutus">About us</Link></li>
+   <li><Link href="/posts/contactus">Contact us</Link></li>
    </ul>
    </footer>
       </div>
