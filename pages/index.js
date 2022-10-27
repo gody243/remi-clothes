@@ -2,24 +2,36 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Slideshow from '../components/slideshow'
+
+
 
 export default function Home() {
   return (
+    <div>
     <div className={styles.container}>
-      <Head>
+      <Head className={styles.head}>
         <title>Remi's closet</title>
         
-        
-      </Head>
+      </Head >
 
       <main className={styles.main}>
         <h1 className={styles.title}>
            REMI'S CLOSET
-        </h1>
-
-        
+        </h1> 
+         <Link href="/posts/first-post">Login</Link>
       </main>
-<Link href="/posts/first-post"></Link>
+
     </div>
+    
+   <footer className="{styles.footer}">
+    <ul>
+   <li><Link href="/posts/about">About us</Link></li>
+   <li><Link href="/posts/contact">Contact us</Link></li>
+   </ul>
+   </footer>
+      </div>
+      
+     
   )
 }

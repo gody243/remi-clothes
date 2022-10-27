@@ -8,12 +8,13 @@ export default function FirstPost(){
         
         <Layout>
             <Head>
-                <title>First Post</title>
+                <title>Login page</title>
             </Head>
-            <h1>First Post</h1>
-            <h2>
-                <Link href="/">homepage</Link>
-            </h2>
+            <div>
+                <h2>
+                    <Link href="/">homepage</Link>
+                </h2>
+            </div>
         </Layout>
     )
 }

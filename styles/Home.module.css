@@ -15,9 +15,10 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  border-top: 2px solid #ffffff;
+  justify-content: left;
   align-items: center;
+  font-size: 29px;
 }
 
 .footer a {
@@ -71,6 +72,9 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
+.head{
+  border: 1px solid #eaeaea;
+}
 
 .card {
   margin: 1rem;
@@ -90,7 +94,9 @@
   color: #0070f3;
   border-color: #0070f3;
 }
-
+.main h1{
+  font-size: 45px;
+}
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
