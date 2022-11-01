@@ -9,26 +9,33 @@ import Slideshow from '../components/slideshow'
 export default function Home() {
   return (
     <div>
-    <div className={styles.container}>
+    
       <Head className={styles.head}>
         <title>Remi's closet</title>
         
       </Head >
-
+      <div className={styles.container}>
+        
+       <div> <Link href="/posts/register">Register</Link> </div>
+        <div><Link href="/posts/login">Login</Link></div>
+        
+      </div>
+  
       <main className={styles.main}>
         <h1 className={styles.title}>
            REMI'S CLOSET
         </h1> 
-         <Link href="/posts/first-post">Login</Link>
+        
+         
       </main>
 
-    </div>
     
-   <footer className="{styles.footer}">
-    <ul>
-   <li><Link href="/posts/aboutus">About us</Link></li>
-   <li><Link href="/posts/contactus">Contact us</Link></li>
-   </ul>
+    
+   <footer className={styles.footer}>
+    
+   <Link href="/posts/aboutus">About us</Link>
+   <Link href="/posts/contactus">Contact us</Link>
+   
    </footer>
       </div>
       

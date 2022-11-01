@@ -11,9 +11,21 @@ export default function Aboutus(){
                 <title>About us</title>
             </Head>
             <div>
-                <h2>
-                    <Link href="/">homepage</Link>
-                </h2>
+                <h4>
+                    <Link href="/"> homepage</Link>
+                </h4>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique ex arcu, at efficitur magna malesuada eget. Suspendisse potenti.
+                 Quisque accumsan tellus vel ante semper interdum et vitae velit.
+                  Quisque sed imperdiet urna. Integer arcu nunc, fermentum in tellus at,
+                   efficitur consectetur odio. Sed porttitor est id nunc porta tempus.
+                    Curabitur aliquam, metus et condimentum aliquam, arcu odio ornare quam,
+                     faucibus bibendum mauris metus ut risus. Cras venenatis tortor id sagittis
+                      mattis. Etiam non erat erat. In tristique, metus accumsan lobortis consequat,
+                       erat ligula iaculis arcu, eget vestibulum nibh eros eget sem.
+                       
+            
+                </p>
             </div>
         </Layout>
     )
