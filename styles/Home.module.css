@@ -30,6 +30,9 @@
   justify-content: space-evenly;
   align-items: center;
   font-size: 29px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-height: 100%;
 }
 
 

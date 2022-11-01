@@ -10,9 +10,8 @@ export default function Home() {
   return (
     <div>
     
-      <Head className={styles.head}>
-        <title>Remi's closet</title>
-        
+      <Head>
+        <title>Remi's closet</title> 
       </Head >
       <div className={styles.container}>
         
