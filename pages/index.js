@@ -22,7 +22,7 @@ export default function Home() {
   
       <main className={styles.main}>
         <h1 className={styles.title}>
-           REMI'S CLOSET
+           House of Stylabae
         </h1> 
         
          

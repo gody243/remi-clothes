@@ -12,9 +12,7 @@ export default function FirstPost(){
                 <title>Login page</title>
             </Head>
             <div>
-                <h2>
-                    <Link href="/">homepage</Link>
-                </h2>
+               <LoginForm/>
             </div>
         </Layout>
         
