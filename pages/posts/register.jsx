@@ -2,7 +2,7 @@
 import Head from "next/head"
 import Link from "next/link"
 import styles from "../../styles/register.module.css"
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import {appendErrors, useForm} from "react-hook-form"
 //import handler from "../api/hello"
 
@@ -11,13 +11,18 @@ function register(){
     const[email,setEmail]=useState('');
     const[password,setPassword]=useState('');
     const { register, formState: { errors }}= useForm()
- 
+
+    
+    
     const handleSubmit=async()=>{
+        console.log("6")
         if(username.length===0 || email.length===0 || password.length<6)
         {
+            console.log("7")
             alert("This is wrong, do Better!")
             }
             else{
+                console.log("8")
                 // app.post('/post',(req,res)=>{
                 //     const name=req.body.username;
                 //     const mail=req.body.email

@@ -9,12 +9,12 @@ export default async function handler(req, res) {
    
   })
   try{
-    const query="SELECT * from register1"
+    const query="SELECT * from products"
     const values=[]
     const[data]=await dbconnection.execute(query,values)
     dbconnection.end()
 
-    res.status(200).json({credentials:data})
+    res.status(200).json({products:data})
   }
   catch(error){
     res.status(500).json({error:error.message})

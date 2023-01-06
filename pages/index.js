@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Slideshow from '../components/slideshow'
-
+import Data from './posts/getdata'
 
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
            House of Stylabae
         </h1> 
         
-         
+         <Data />
       </main>
 
     
