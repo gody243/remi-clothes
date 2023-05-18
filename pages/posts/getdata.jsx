@@ -22,11 +22,12 @@ return(
             return(
                 <div key={products.productId}>
                 <div>{products.productname}</div>
-                <div className={styles.img}>
+                <div>
                     
                     <img className={styles.photo} src={`${products.image}`} alt="" />
                     
                     </div>
+                   
                 </div>
             )
         })}

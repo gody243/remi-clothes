@@ -14,14 +14,18 @@
   "dependencies": {
     "@next/font": "^13.0.0",
     "axios": "^1.2.1",
+    "cardinal": "^2.1.1",
     "express": "^4.18.2",
+    "fs": "^0.0.1-security",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "net": "^1.0.2",
     "next": "^13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.39.4",
-    "react-slideshow-image": "^4.0.5"
+    "react-slideshow-image": "^4.0.5",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

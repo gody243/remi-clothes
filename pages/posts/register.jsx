@@ -1,10 +1,11 @@
 
+import Axios from 'axios'
 import Head from "next/head"
 import Link from "next/link"
 import styles from "../../styles/register.module.css"
-import React,{useState,useEffect} from "react"
-import {appendErrors, useForm} from "react-hook-form"
-//import handler from "../api/hello"
+import React,{useEffect, useState} from "react"
+import {useForm} from "react-hook-form"
+//import sql from "../api/registersql"
 
 function register(){
     const[username,setUsername]=useState('');
@@ -12,35 +13,32 @@ function register(){
     const[password,setPassword]=useState('');
     const { register, formState: { errors }}= useForm()
 
+    const handleSubmit=async (event) => {
+        event.preventDefault()
+        const teamPayload={username,email,password}
+        console.log("Payload: ",teamPayload)
+         if(username.length===0 || email.length===0 || password.length<6)
+         {
+            
+             alert("This is wrong, do Better!")
+             }
+        try{
+            const{data}= await Axios ({
+            
+                url:"/api/registersql",
+                method:"POST",
+                data:teamPayload
+            })
+           console.log("Response back: ",data)
+        }
+        catch(error){
+            console.log('Error: ',error)
+        }
+            
+        
+            
+    };
     
-    
-    const handleSubmit=async()=>{
-        console.log("6")
-        if(username.length===0 || email.length===0 || password.length<6)
-        {
-            console.log("7")
-            alert("This is wrong, do Better!")
-            }
-            else{
-                console.log("8")
-                // app.post('/post',(req,res)=>{
-                //     const name=req.body.username;
-                //     const mail=req.body.email
-                //     const pass=req.body.password;
-
-                //     dbconnection.query('INSERT INTO register1 Values(?,?,?)',[name,mail,pass],(err,result)=>{
-                //         if(err){
-                //             console.log(err)
-                //         }else{
-                //             console.log('posted')
-                //         }
-                    // })
-
-                    
-                // })
-    
-    }
-    }
     return( 
         <> 
          
@@ -71,7 +69,7 @@ function register(){
                             <label htmlFor="password"> password: </label>
                             <input type="password" name="password"value={password}onChange={(e)=>setPassword(e.target.value)}/>
                             {errors.password && errors.password.type=="required" && <p className='text-danger'>enter password</p>}
-                            {errors.password && errors.password.type==="minLength" && <p className='text-warning'>paswword with 6 letters minimum</p>}
+                            {errors.password && errors.password.type==="minLength" && <p className='text-warning'>password with 6 letters minimum</p>}
                         </div>
                         <div className="form-group p-4">
                            <button type="submit" className="btn btn-success" onClick={handleSubmit}>Submit</button>
@@ -86,5 +84,6 @@ function register(){
             
         </>
     )
+   // }
 }
 export default register
