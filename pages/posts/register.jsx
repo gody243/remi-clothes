@@ -27,7 +27,7 @@ function register(){
             
                 url:"/api/registersql",
                 method:"POST",
-                data:teamPayload
+                data:JSON.stringify(teamPayload)
             })
            console.log("Response back: ",data)
         }
