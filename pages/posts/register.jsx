@@ -24,6 +24,7 @@ function register(){
              }
              fetch("/api/registersql",{
                 method:"POST",
+<<<<<<< HEAD
                 headers:{"Content-Type": "application/json"},
                 body:JSON.stringify(teamPayload)
              }).then(()=>{
@@ -33,6 +34,15 @@ function register(){
                 
             
          
+=======
+                data:JSON.stringify(teamPayload)
+            })
+           console.log("Response back: ",data)
+        }
+        catch(error){
+            console.log('Error: ',error)
+        }
+>>>>>>> 012c8743cb602cdff28a2dcd97cf370b1f3f8722
             
         
             
