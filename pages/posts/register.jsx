@@ -22,18 +22,17 @@ function register(){
             
              alert("This is wrong, do Better!")
              }
-        try{
-            const{data}= await Axios ({
-            
-                url:"/api/registersql",
+             fetch("/api/registersql",{
                 method:"POST",
-                data:teamPayload
-            })
-           console.log("Response back: ",data)
-        }
-        catch(error){
-            console.log('Error: ',error)
-        }
+                headers:{"Content-Type": "application/json"},
+                body:JSON.stringify(teamPayload)
+             }).then(()=>{
+                console.log("new blog added")
+             })
+               
+                
+            
+         
             
         
             

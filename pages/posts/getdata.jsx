@@ -1,4 +1,4 @@
-import Image from 'next/image'
+//import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 import React,{useState,useEffect} from "react"
 
@@ -6,7 +6,7 @@ export default function Data(){
 const[dataResponse,setDataResponse]=useState([])
 
 useEffect(()=>{
-    async function getPageData(){
+    async function getPageData(props){
         const apiUrlEndpoint=`http://localhost:3000/api/hello`
         const response= await fetch(apiUrlEndpoint)
         const res= await response.json();

@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   catch(error){
     res.status(500).json({error:error.message})
   }
-  if(req.method==='GET'){
+  if(req.method==='POST'){
     const credentials=req.body.credentials
     const newCredentials={
       username:credentials.username,
