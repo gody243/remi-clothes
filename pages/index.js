@@ -1,10 +1,9 @@
+
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Slideshow from '../components/slideshow'
-import Data from './posts/getdata'
 
+import Data from './posts/getdata'
 
 export default function Home() {
   return (
@@ -13,6 +12,7 @@ export default function Home() {
       <Head>
         <title>Remi's closet</title> 
       </Head >
+      
       <div className={styles.container}>
         
        <div> <Link href="/posts/register">Register</Link> </div>
@@ -24,8 +24,7 @@ export default function Home() {
         <h1 className={styles.title}>
            House of Stylabae
         </h1> 
-        
-         <Data />
+      <Data />
       </main>
 
     

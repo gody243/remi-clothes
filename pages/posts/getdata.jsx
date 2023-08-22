@@ -6,25 +6,32 @@ export default function Data(){
 const[dataResponse,setDataResponse]=useState([])
 
 useEffect(()=>{
-    async function getPageData(props){
+    const abortCont=new AbortController()
+    async function getPageData(){
         const apiUrlEndpoint=`http://localhost:3000/api/hello`
         const response= await fetch(apiUrlEndpoint)
-        const res= await response.json();
-        console.log(res);
+        
+         const res= await response.json()//.catch(error=>{
+        //     if(error === 'AbortError'){
+        //         console.log('fetch aborted')
+        //     }
+        // });
+       
         setDataResponse(res.products)
     }
     getPageData();
+    return()=>abortCont.abort()
 }, [])
 
 return(
     <div className={styles.container}>
-        {dataResponse.map((products)=>{
+        {dataResponse.map((product) =>{
             return(
-                <div key={products.productId}>
-                <div>{products.productname}</div>
+                <div key={product.productid}>
+                    {product.productname}
                 <div>
                     
-                    <img className={styles.photo} src={`${products.image}`} alt="" />
+                    <img className={styles.photo} src={`${product.image}`} alt="" />
                     
                     </div>
                    

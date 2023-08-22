@@ -1,17 +1,18 @@
 
-import Axios from 'axios'
 import Head from "next/head"
 import Link from "next/link"
 import styles from "../../styles/register.module.css"
-import React,{useEffect, useState} from "react"
+import React,{useState} from "react"
 import {useForm} from "react-hook-form"
-//import sql from "../api/registersql"
+import {useRouter} from "next/router"
 
 function register(){
     const[username,setUsername]=useState('');
     const[email,setEmail]=useState('');
     const[password,setPassword]=useState('');
-    const { register, formState: { errors }}= useForm()
+    const { formState: { errors }}= useForm();
+    const router = useRouter()
+
 
     const handleSubmit=async (event) => {
         event.preventDefault()
@@ -22,27 +23,18 @@ function register(){
             
              alert("This is wrong, do Better!")
              }
-             fetch("/api/registersql",{
+             fetch("http://localhost:8000/register",{
                 method:"POST",
-<<<<<<< HEAD
                 headers:{"Content-Type": "application/json"},
                 body:JSON.stringify(teamPayload)
              }).then(()=>{
-                console.log("new blog added")
+                console.log("new registration added")
+                router.push('/')
              })
                
                 
             
          
-=======
-                data:JSON.stringify(teamPayload)
-            })
-           console.log("Response back: ",data)
-        }
-        catch(error){
-            console.log('Error: ',error)
-        }
->>>>>>> 012c8743cb602cdff28a2dcd97cf370b1f3f8722
             
         
             
