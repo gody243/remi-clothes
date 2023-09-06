@@ -53,6 +53,12 @@
       "email": "dkecneoi@rjfn.com",
       "password": "kjefnrjkvnrjkcn",
       "id": 17
+    },
+    {
+      "username": "admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "id": 18
     }
   ]
 }
