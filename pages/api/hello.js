@@ -19,14 +19,5 @@ export default async function handler(req, res) {
   catch(error){
     res.status(500).json({error:error.message})
   }
-  if(req.method==='POST'){
-    const credentials=req.body.credentials
-    const newCredentials={
-      username:credentials.username,
-      email:credentials.email,
-      password:credentials.password
-    }
-    credentials.push(newCredentials)
-    res.status(201).json(newCredentials)
-  }
+
 }

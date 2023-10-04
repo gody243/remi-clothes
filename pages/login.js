@@ -1,10 +1,9 @@
 
 import Link from "next/link";
 import Head from "next/head";
-import Layout from "../../components/layout";
+import Layout from "../components/layout";
 import axios from "axios";
-import React from "react";
-import { useState } from "react";
+import React,{ useState } from "react";
 
 export default function Login() {
   const [loginUsername, setLoginUsername] = useState("");
@@ -34,7 +33,7 @@ export default function Login() {
         </Head>
         <div>
           <h1> Login Page</h1>
-          <Link href="/">homepage</Link>
+          
           <div>
             <input
               type="text"
@@ -52,6 +51,9 @@ export default function Login() {
             />
           </div>
           <button onClick={login}>login</button>
+        </div>
+        <div>
+          <Link href="./register">Click here to register</Link>
         </div>
       </Layout>
     </>

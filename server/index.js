@@ -1,3 +1,4 @@
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -32,7 +33,7 @@ app.use(passport.session());
 require("./passportConfig")(passport);
 
 app.get("/", (req, res) => {
-  res.send("Helle");
+  res.send("Hella");
 });
 
 app.post("/register", (req, res) => {
@@ -53,7 +54,7 @@ app.post("/register", (req, res) => {
     }
     if (result.length === 0) {
       const hashPassword = bcrypt.hashSync(password, 10);
-      db.query(query, [username, email, password], (err, result) => {
+      db.query(query, [username, email, hashPassword], (err, result) => {
         if (err) {
           throw err;
         }
@@ -62,26 +63,6 @@ app.post("/register", (req, res) => {
     }
   });
 });
-
-// app.post('/login', (req, res, next) => {
-//   passport.authenticate('local', (err, user, info) => {
-//     if (err) {
-//       console.log(err);
-//     }
-//     if (!user) {
-//       res.send('No user exist');
-//     }
-//     if (user) {
-//       req.login(user, (err) => {
-//         if (err) {
-//           throw err;
-//         }
-//         res.send('User logged in');
-//         console.log(user);
-//       });
-//     }
-//   })(req, res, next);
-// });
 
 app.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {

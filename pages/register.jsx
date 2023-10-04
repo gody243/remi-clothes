@@ -1,6 +1,7 @@
+
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../../styles/register.module.css";
+import styles from "../styles/register.module.css";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";

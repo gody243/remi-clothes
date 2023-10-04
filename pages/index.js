@@ -2,25 +2,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import axios from 'axios'
-import Data from './posts/getdata'
-import { useState,useEffect } from 'react'
+import Profile from './profile'
 
 export default function Home() {
 
-  const[username,setUsername]=useState('')
-
-  useEffect(()=>{
-    getUser();
-  },[])
-
-  const getUser =()=>{
-    axios({
-      method: 'get',
-      withCredentials:true,
-      url: 'http://localhost:3001/getUser'
-    }).then(res=>{setUsername(res.data.username)}).catch(err=>console.log(err))
-  }
   return (
     <div>
     
@@ -28,10 +13,10 @@ export default function Home() {
         <title>Remi's closet</title> 
       </Head >
       
+
       <div className={styles.container}>
         
-       <div> <Link href="/posts/register">Register</Link> </div>
-        <div><Link href="/posts/login">Login</Link></div>
+       
         
       </div>
   
@@ -39,8 +24,10 @@ export default function Home() {
         <h1 className={styles.title}>
            House of Stylabae
         </h1> 
-        <h4>Hi {username}</h4>
-      <Data />
+        <div> <Link href="/register">Register</Link> </div>
+        <div><Link href="/login">Login</Link></div>
+        <Profile />
+     
       </main>
 
     
