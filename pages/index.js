@@ -10,7 +10,7 @@ export default function Home() {
     <div>
     
       <Head>
-        <title>Remi's closet</title> 
+        <title>closet</title> 
       </Head >
       
 
@@ -23,9 +23,11 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
            House of Stylabae
-        </h1> 
-        <div> <Link href="/register">Register</Link> </div>
-        <div><Link href="/login">Login</Link></div>
+        </h1>
+        <br/>
+        <div><Link className="links" href="/register">Register</Link></div> 
+         
+        <div><Link className="links" href="/login">Login</Link></div>
         <Profile />
      
       </main>

@@ -21,7 +21,7 @@ useEffect(()=>{
   }
     return(
     <div className={styles.container}>
-        <h4>Hi {user}</h4>
+        
         <div>
         <Data />
         </div>

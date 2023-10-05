@@ -31,29 +31,36 @@ export default function Login() {
         <Head>
           <title>Login page</title>
         </Head>
+        
+      
         <div>
-          <h1> Login Page</h1>
-          
-          <div>
-            <input
+          <h1 className="login"> Login Page</h1>
+          </div>
+          <div><Link className="homepage" href="/">homepage</Link></div>
+          <div className="flex">
+        <div className="credentials">
+          <h4>Username</h4>
+            <input 
               type="text"
               name="username"
               placeholder="username"
               onChange={(e) => setLoginUsername(e.target.value)}
             />
-          </div>       
-          <div>
-            <input
+         
+         <h4>Password</h4>
+            <input 
               type="password"
               name="password"
               placeholder="password"
               onChange={(e) => setLoginPassword(e.target.value)}
             />
-          </div>
-          <button onClick={login}>login</button>
+          
+          <button className="login-btn" onClick={login}>login</button>
         </div>
-        <div>
+       
+        <div><p>You don't have an account?</p>
           <Link href="./register">Click here to register</Link>
+        </div>
         </div>
       </Layout>
     </>

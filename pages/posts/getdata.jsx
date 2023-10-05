@@ -31,7 +31,7 @@ return(
                     {product.productname}
                 <div>
                     
-                    <img className={styles.photo} src={`${product.image}`} alt="" />
+                    <img className={styles.photo} src={`${product.image}`} alt="products"  />
                     
                     </div>
                    

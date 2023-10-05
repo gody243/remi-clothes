@@ -1,4 +1,3 @@
-
 const db = require("./db");
 const bcrypt = require("bcrypt");
 const localStrategy = require("passport-local").Strategy;
