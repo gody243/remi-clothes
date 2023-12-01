@@ -1,15 +1,17 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import  mysql from "mysql2/promise"
+require('dotenv').config()
+
 export default async function handler(req, res) {
   const dbconnection = await mysql.createConnection({
-    host:"localhost",
+    host:process.env.DB_HOST,
     database:"remi_clothes",
-    user:"root",
-    password:"",
+    user:process.env.DB_USER,
+    password:process.env.DB_PASS,
    
   })
   try{
-    const query="SELECT * from products"
+    const query="SELECT * from produits"
     const values=[]
     const[data]=await dbconnection.execute(query,values)
     dbconnection.end()
